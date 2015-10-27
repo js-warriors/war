@@ -1,0 +1,84 @@
+Has somebody won?
+	- one player has zero cards  // this is independant of starting number of cards  // deides the looser
+	- one player has 10 points  // decides the winner
+Game Ends
+	- some final graphic or message announcing winner/looser
+	- option to play again 
+	- (advanced: store high score or winner's name)
+
+Game Initialization
+	- get player's name
+	- initialize the deck	
+	- shuffle the deck		// want graphics/video?
+	- deal the deck			// want graphics/video?
+	- set the stage for game play
+		- spot for players' names
+		- spot for each players "stack" or "pile" or "war chest" or "amunition"
+		- spot for each player's score
+		- spot to show the cards just flipped
+		- spot to show a "treasureChest" (the cards battling in war: in the event of a tie)
+
+Game Play
+	- player clicks his stack to initiate flipping of both cards
+	- show top card of each player's stack
+		- // later: can randomize both player's stack each time the cards are flipped
+		- pop the "top" card off each player's pile
+		- push both cards into "bounty pile" or "treasureChest" 
+			// array - this is temp storage for the treasureChest 
+			(ie the cards to be won or lost at resolution)
+		- graphics showing the flipped cards faces
+		-- will want to somehow hold this image on screen for some amount of time,
+		-- OR require a keypress by the player before moving on.. else player may not see the what cards were played.
+	- compute winner of the hand
+		- if (not a tie) 
+			+ push treasureChest to "bottom" of winning player's pile
+			+ empty treasureChest
+			+ increment score for player with winning hand
+			+ graphics showing who won the skirmish
+			+ graphics updating the score
+			+ graphics showing a transfer of cards(treasureChest contents) to the winner
+			- check if game is over or not
+				-- if game over: do game over stuff
+				-- if not game over: start again at start of "Game Play"
+
+		-  if (tie)
+			- push both cards into treasureChest
+			- each pops an additional card from their stack and
+				-- push both these (unseen) cards into the treasure chest as well
+			- graphics indicating a tie
+			- graphics indicating "war is on"
+			- graphics showing (4) cards are now in the treasureChest
+			- check if game is over or not
+				++ ?? if one player is out of cards at this point (save the one "tied" on the table), does that make it "GameOver?" (one player has no Other cards to play)
+					++ or at that point is the skirmish determined by ranking suits of the that last card (say Spade, Diamond, Club, Heart)? so that if the last Player's card is higher on the list, he wins and is still in the game with basically 3 cards now, but if it was lower, then the other player takes both cards, leaving one player empty handed, and officially the looser
+				- if GameOver, do Game Over Stuff
+				-- if not game over: start again at start of "Game Play"
+			 
+----------------------------------------------------------------
+
+Objects
+
+- full deck of cards [{value, suite},..]  
+			//52 elements of type card  
+			// used to deal the deck.
+- card 
+	- image url	// "./images/aceDiamonds.jpg"
+	- suite		// "heart", "diamond", "club", "spade"
+	- rank 	 	// "king", "ten" , etc
+	- value  	// 1-13  numeric value. highest number wins
+- treasureChest [] // cards in play - to be acquired by one of the players
+- warChest[0] [card1,card2,..]	// player1's or the computer's "stack"
+- warChest[1] [card1,card2,..]	// player2's "stack"
+		-- where card1, card2 is an object of type card
+
+Functions
+
+-dealing function (randomly assigns half the cards from deck to each player)
+- game over?
+- flip card
+- compare cards - determine who won that skirmish
+- ...
+
+
+
+
