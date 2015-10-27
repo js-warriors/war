@@ -1,6 +1,8 @@
 # War by JS - Warriors
 
-- Brandon (Project Owner)
-- Sheryl Hohman (Scrum Master)
+- Brandon Stookey (Project Owner)
 - Chris Adkinson
-- Hiro
+- Hiro Matsuda
+- Sheryl Hohman   (Scrum Master)
+
+Re-creation of the card game "War"
