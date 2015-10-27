@@ -12,17 +12,17 @@ var suite = ['hearts','diamonds','spades','clubs'];
 
 var c = 1;
 while (c <= 52) {
-for (var s = 0; s <= 3; s++) {
-	for (var rv = 0; rv <= 12; rv++) {
-		card[c] = {
-			suite: suite[s],
-			rank: rank[rv],
-			value: value[rv],
-			
+	for (var s = 0; s <= 3; s++) {
+		for (var rv = 0; rv <= 12; rv++) {
+			card[c] = {
+				suite: suite[s],
+				rank: rank[rv],
+				value: value[rv],
+				
+			}
+			c++;
 		}
-		c++;
 	}
-}
 }
 
 
