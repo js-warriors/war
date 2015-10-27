@@ -1,3 +1,6 @@
 # War by JS - Warriors
 
-- Sheryl Hohman (Scrum Master)- Chris Adkinson
+- Brandon (Project Owner)
+- Sheryl Hohman (Scrum Master)
+- Chris Adkinson
+- Hiro
