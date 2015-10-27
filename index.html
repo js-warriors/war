@@ -2,10 +2,11 @@
 <html>
 <head>
 	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <title>War!</title>
 </head>
 <body>
-<h1>War</h1>
+<h1 id='header'>WAR!</h1>
 
 <div id = "computer_deck">
 	<img id= "deck-img" src="images/deck-cards-blue.png">
@@ -13,7 +14,7 @@
 </div>
 <div id = "user_deck">
 	<img id= "deck-img" src="images/deck-cards-red.png">
-	<img id= "user-card-img" src="images/4_of_diamonds.png">
+	<img id= "user-card-img" src="images/4_of_clubs.png">
 </div>
 <span class="btn" href="#">FLIP!</span>
 
@@ -27,8 +28,8 @@
 	});
 
 	$('.btn').click(function(){
-    $('#computer-card-img').show();
-    $('#user-card-img').show();
+    $('#computer-card-img').toggle();
+    $('#user-card-img').toggle();
 	})
 </script>
 </body>

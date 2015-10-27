@@ -6,6 +6,12 @@ body {
     margin: 0 auto;
     text-align: center;
     color: white;
+	font-family: 'Passion One', cursive; font-weight: 400;
+}
+
+#header {
+	font-size: 3em;
+	margin: 20px;
 }
 
 button {
@@ -64,9 +70,8 @@ button {
   -webkit-box-shadow: 0px 1px 3px #666666;
   -moz-box-shadow: 0px 1px 3px #666666;
   box-shadow: 0px 1px 3px #666666;
-  font-family: Arial;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 2em;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }
