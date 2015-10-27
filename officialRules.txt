@@ -1,0 +1,36 @@
+OFFICIAL RULES
+
+Age: All
+Players: 2
+Deck: Standard, Jumbo Index 52 card deck
+
+This game is a favorite with even the youngest age group. The rules are very simple, and the game, while pure luck, can be very exciting. It is all a matter of chance because only the denomination of the cards matters.
+
+Suggested Ages. 5 to 12.
+
+Skills Developed. Counting and the card values.
+
+Rank of Cards. K, Q, J, 10, 9, 8, 7, 6, 5, 4, 3, 2, A. (In some games aces are high.)
+
+The Deal. The deck is divided evenly, with each player receiving 26 cards, dealt one at a time, face down. Anyone may deal first. Each player places his stack of cards face down, in front of him.
+
+Object of the Game. The goal is to be the first player to win all 52 cards.
+update README.md with everyone's name
+
+-----------------------------------------------------
+The Play. 
+- Each player turns up a card at the same time 
+- and the player with the higher card takes both cards and puts them, face down, on the bottom of his stack. 
+- If the cards are the same rank, it is War. 
+----- Each player turns up one card face down and one card face up.
+----- The player with the higher cards takes both piles (six cards). 
+----- If the turned-up cards are again the same rank,    
+-------- each player places another card face down 
+-------- and turns another card face up. 
+- The player with the higher card takes all 10 cards, and so on. 
+
+The game ends when one player has won all the cards.
+-----------------------------------------------------
+
+Quadruple War
+In this version, when there is a War, each player counts out four cards face down, instead of one, and the next card turned face up by each player determines the winner of all the cards. Quadruple War is even more exciting than regular War, and in many regions, it has become more popular than the standard game.
