@@ -1,3 +1,3 @@
 # War by JS - Warriors
-- Sheryl Hohman (Scrum Master)
-- Chris Adkinson
+
+- Sheryl Hohman (Scrum Master)- Chris Adkinson
