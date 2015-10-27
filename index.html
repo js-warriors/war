@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+    <title>War!</title>
+</head>
+<body>
+<h1>War</h1>
+
+<div id = "computer_deck">
+	<img id= "deck-img" src="images/deck-cards-blue.png">
+	<img id= "computer-card-img" src="images/4_of_hearts.png">	
+</div>
+<div id = "user_deck">
+	<img id= "deck-img" src="images/deck-cards-red.png">
+	<img id= "user-card-img" src="images/4_of_diamonds.png">
+</div>
+<span class="btn" href="#">FLIP!</span>
+
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script>
+	$(document).ready(function() {
+	$('#computer-card-img').hide();
+	$('#user-card-img').hide();
+	});
+
+	$('.btn').click(function(){
+    $('#computer-card-img').show();
+    $('#user-card-img').show();
+	})
+</script>
+</body>
+</html>
