@@ -63,14 +63,16 @@ var mainGame = function(){
 			if(userDeck[i].num > computerDeck[i].num){
 				userPoints++;
 			} 
-			else if (userDeck[i].num === computerDeck[i].num){
-					if(userDeck[i + 1].num > computerDeck[i + 1].num){
-						userPoints = userPoints + 2;	
-					} 
-					else {
-						computerPoints = computerPoints + 2;
-					}
-			} 
+		////////I am having trouble with the tired part of the game///////////
+		
+			// else if (userDeck[i].num === computerDeck[i].num){
+			// 		if(userDeck[i + 1].num > computerDeck[i + 1].num){
+			// 			userPoints = userPoints + 2;	
+			// 		} 
+			// 		else {
+			// 			computerPoints = computerPoints + 2;
+			// 		}
+			// } 
 			else {
 				computerPoints++;
 			}
