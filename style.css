@@ -26,6 +26,7 @@ button {
 	width: 330px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 40px;
 }
 
 #user_deck{
@@ -56,7 +57,15 @@ button {
  	margin-right: auto;
 }
 
-.btn {
+#user-name, #computer-name {
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 15px;
+	font-size: 1em;
+}
+
+.btn-flip, .btn-shuffle, .btn-start {
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
   background-image: -moz-linear-gradient(top, #3498db, #2980b9);
@@ -73,10 +82,11 @@ button {
   color: #ffffff;
   font-size: 2em;
   padding: 10px 20px 10px 20px;
+  margin: 20px 10px 10px 10px;
   text-decoration: none;
 }
 
-.btn:hover {
+.btn-flip:hover, .btn-shuffle:hover, .btn-start:hover {
   background: #3cb0fd;
   background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
