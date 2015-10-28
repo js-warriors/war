@@ -82,5 +82,5 @@ var mainGame = function(){
 		
 };
 
-mainGame(); //Have method start when user click "start button, restart button"
+//mainGame(); //Have method start when user click "start button, restart button"
 
