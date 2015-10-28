@@ -2,34 +2,48 @@
 <html>
 <head>
 	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+	<script language="javascript" type="text/javascript" src="war.js"></script>
     <title>War!</title>
 </head>
 <body>
-<h1>War</h1>
+<h1 id='header'>WAR!</h1>
+
+<span class="btn-shuffle" href="#">SHUFFLE</span>
+<span class="btn-start" href="#">START</span>
 
 <div id = "computer_deck">
+	<span id="computer-name">Computer</span>
+	</br>
 	<img id= "deck-img" src="images/deck-cards-blue.png">
-	<img id= "computer-card-img" src="images/4_of_hearts.png">	
+	<img id= "computer-card-img" src="images/4_of_hearts.png">		
 </div>
 <div id = "user_deck">
+	<span id="user-name">User</span>
+	</br>
 	<img id= "deck-img" src="images/deck-cards-red.png">
-	<img id= "user-card-img" src="images/4_of_diamonds.png">
+	<img id= "user-card-img" src="images/4_of_clubs.png">
 </div>
-<span class="btn" href="#">FLIP!</span>
+<span class="btn-flip" href="#">FLIP!</span>
 
 
 
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <script>
+	$('.btn-start').click(function(e) {
+		// prompt("What's your name brave soul??");
+		mainGame();
+	});
+
 	$(document).ready(function() {
 	$('#computer-card-img').hide();
 	$('#user-card-img').hide();
 	});
 
-	$('.btn').click(function(){
-    $('#computer-card-img').show();
-    $('#user-card-img').show();
-	})
+	$('.btn-flip').click(function(){
+    $('#computer-card-img').toggle();
+    $('#user-card-img').toggle();
+	});
 </script>
 </body>
 </html>
