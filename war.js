@@ -1,86 +1,92 @@
+var IMGi = 0;
+var MGi = 0;
+var cards = [];
+var rank = ['2','3','4','5','6','7','8','9','10','jack','queen','king','ace'];
+var value = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+var suite = ['hearts','diamonds','spades','clubs'];
 var userDeck = [];
 var userPoints = 0;
 var computerDeck = [];
 var computerPoints = 0;
-var cards = [{value: 1}, 
-			 {value: 2}, 
-			 {value: 3}, 
-			 {value: 4}
-			 ];
+
+
+var images = function(){
+ userDeck[IMGi].img;
+ computerDeck[IMGi].img;
+ IMGi++;
+};
 
 
 
-//this function assigns the shuffled array to either userDeck or computerDeck
+//Here we have cards array 0-51.   
+var c = 0;
+while (c < 52) {
+	for (var s = 0; s <= 3; s++) {
+		for (var rv = 0; rv <= 12; rv++) {
+			cards[c] = {
+				suite: suite[s],
+				rank: rank[rv],
+				value: value[rv],
+				img: 'images/' + rank[rv] + '_of_' + suite[s] + '.png'
+			}
+			c++;
+		}
+	}
+}
+
+//cuts the deck
+//the 'array' here and in the ff is our 'var cards' above
 var assignDeck = function(array){ 
-	for(var i = 0; i < array.length; i++){
-		if(i % 2 === 0){
+	for(var i = 0; i < (array.length - 1); i++){
+		if (i % 2 === 0) {
 			userDeck.push(array[i]);
 		} else {
 			computerDeck.push(array[i]);
 		}; 
 	};
 };	
-// http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-	//this is the website I got the shuffle funciton for arrays from
 
-//This is a function used to shuffle the deck //Make start button, then have it change to flip button
-var shuffle = function(userInput){      
-	if(userInput === "startGame"){
-		var shuffleArray = function(array) {
-    	for (var i = array.length - 1; i > 0; i--) {
-        	var j = Math.floor(Math.random() * (i + 1));
-        	var temp = array[i];
-        	array[i] = array[j];
-        	array[j] = temp;
-    		}
-    		array = array;
-    		return array;
-		}
-	shuffleArray(cards);
-	} 
+
+//shuffles the deck 
+var shuffle = function(array) {
+	for (var i = array.length - 1; i > 0; i--) {
+    	var j = Math.floor(Math.random() * (i + 1));
+    	var temp = array[i];
+    	array[i] = array[j];
+    	array[j] = temp;
+	}
+	array = array;
+	return array;
 }
-// This is a function to check to see if either the computer or player won the game
+
+
+//checks if either the computer or player already won the game
 var winnerCheck = function (playerPoints, computerPoints) {
-	if(playerPoints === 2){
-		console.log("Congrats you won the game!");
+	if (playerPoints === 10) {
+		alert("Congrats you won the game!");
+		$('.btn-flip').remove();
+	} else if (computerPoints === 10) {
+		alert("You lose!");	
+		$('.btn-flip').remove();
+	} else {
 		return false;
-	} else if(computerPoints === 2) {
-		console.log("You lose sucker!");	
-		return false;
-	} 
+	}
 };
 
-//This is the main function that starts the game and incorporates all above functions and variables
-var mainGame = function(){            
-	shuffle("startGame");
-	assignDeck(cards); 
-
-	console.log("userDeck: ", userDeck);
-	console.log("computerDeck: ", computerDeck);
-
-		for(var i = 0; i < 2; i++){                       //Do not hard code length
-			if(userDeck[i].value > computerDeck[i].value){
-				userPoints++;
-				winnerCheck(userPoints, computerPoints);
-			} else if (userDeck[i].value === computerDeck[i].value){
-					if(userDeck[i + 1].value >= computerDeck[i + 1].value){
-						userPoints = userPoints + 2;
-						winnerCheck(userPoints, computerPoints);	
-					} 
-					else {
-						computerPoints = computerPoints + 2;
-						winnerCheck(userPoints, computerPoints);
-					}
-			} else {
-				computerPoints++;
-				winnerCheck(userPoints, computerPoints);
-			}
-		};
-		console.log("UserPoints: ", userPoints);
-		console.log("ComputerPoints:", computerPoints);
-
-		
+//starts the game and incorporates all above functions and variables
+var mainGame = function() {            
+	                     
+	var bonus = 0;
+	while (userDeck[MGi].value === computerDeck[MGi].value) {
+		MGi += 2;
+		bonus += 2;
+	}
+	if(userDeck[MGi].value > computerDeck[MGi].value){
+		userPoints++;
+		userPoints += bonus; 
+	} else {
+		computerPoints++;
+		computerPoints += bonus;
+	}
+	MGi++;
 };
-
-//mainGame(); //Have method start when user click "start button, restart button"
-
