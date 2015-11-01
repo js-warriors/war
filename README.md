@@ -11,7 +11,7 @@ Re-creation of the card game "War"
 1.0
 
 ### Usage
-Visit [www.war/netify.com](www.war/netify.com) to play
+Visit [www.war/netify.com](http://war.netlify.com/) to play
 
 or Download the latest files:
 
